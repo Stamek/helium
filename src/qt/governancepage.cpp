@@ -132,7 +132,7 @@ void GovernancePage::updateProposalList()
     ui->blocks_before_super_value->setText(QString::number(nBlocksLeft));
     ui->time_before_super_value->setText(QString::number(nBlocksLeft/60/24));
     ui->alloted_budget_value->setText(QString::number(nTotalAllotted/COIN));
-    ui->unallocated_budget_value->setText(QString::number((budget.GetTotalBudget(pindexPrev->nHeight) - nTotalAllotted)/COIN));
+    ui->unallocated_budget_value->setText(QString::number((budget.GetTotalBudget(nBlockStart) - nTotalAllotted)/COIN));
     ui->masternode_count_value->setText(QString::number(mnodeman.CountEnabled(ActiveProtocol())));
 }
 
